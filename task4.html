@@ -1,0 +1,324 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jayasudiksha M | Web Developer Portfolio">
+    <title>Jayasudiksha M | Web Developer Portfolio</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ff00ff;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('image.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background animation */
+header {
+    background: url('image.jpg') no-repeat center center/cover; /* Add your image URL here */
+    height: 80vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5e57;
+}
+
+/* Headline */
+.headline {
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.headline h1 {
+    font-size: 3rem;
+}
+
+.headline h1 span {
+    color: White;
+}
+
+.headline p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+/* Creative button with animation */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #660500;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease;
+    margin-top: 20px;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover:before {
+    transform: scale(1);
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-content img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-content img:hover {
+    transform: rotate(10deg);
+}
+
+.about-content .text {
+    max-width: 500px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+}
+
+.project {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-top: 10px;
+    color: #ff5e57;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #ff5e57;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff5e57;
+}
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="headline" id="home">
+            <h1>Hello, I'm <span>Jayasudiksha</span></h1>
+            <p>Software Developer | MCA Student</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="js.jpg" alt="Profile Photo">
+            <div class="text">
+                <p>I'm Jayasudiksha M, a passionate web developer with a focus on creating efficient and privacy-focused applications. Currently pursuing my MCA, I have developed several projects. I'm proficient in JavaScript, HTML, CSS</p>
+                <p>My goal is to create clean, fast, and responsive websites that solve real-world problems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-gallery">
+            <div class="project">
+                <img src="ttt.jpg" alt="Project 1">
+                <h3>Tic-Tac-Toe</h3>
+                <p>Users can play this game against AI</p>
+            </div>
+            <div class="project">
+                <img src="sw.jpg" alt="Project 2">
+                <h3>Stop Watch Web</h3>
+                <p>An application that efficiently used for starting , lapping and resetting the time.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <footer class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any inquiries, feel free to reach out!</p>
+        <ul>
+            <li><a href="mailto:email@example.com">email@example.com</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
